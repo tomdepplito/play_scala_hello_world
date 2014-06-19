@@ -2,11 +2,13 @@ package controllers
 
 import play.api._
 import play.api.mvc._
+import models.Answer
 
 object Application extends Controller {
 
   def index = Action {
-    var answer:String = "Answer: " + fib(4)
+    var testAnswer = new Answer(123, 6)
+    var answer:String = "Answer: " + testAnswer.result //fib(4)
     Ok(views.html.index(answer))
   }
 
