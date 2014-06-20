@@ -11,7 +11,7 @@ class AnswerSpec extends Specification {
 
   "Answer" should {
     "calculate fibonacci correctly" in {
-      val answer = new Answer(123, 4)
+      val answer = new Answer(4)
       Answer.fib(4) must equalTo(5)
       answer.result must equalTo(Answer.fib(4))
     }

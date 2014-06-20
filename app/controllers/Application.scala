@@ -7,7 +7,7 @@ import models.Answer
 object Application extends Controller {
 
   def index = Action {
-    var testAnswer = new Answer(123, 6)
+    var testAnswer = new Answer(6)
     Answer.save(testAnswer)
     println(testAnswer.result) // Test log to console
     var answer:String = "Answer: " + testAnswer.result
